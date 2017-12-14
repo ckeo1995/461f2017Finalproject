@@ -1,0 +1,76 @@
+<!--
+	Name: Christopher Keo/Ryan Keiran
+	Computer Science department, UMass Lowell
+	Comp.4610, GUI 1
+	Created: 12/5/17
+	Updated: 12/13/17
+-->
+
+<!DOCTYPE html>
+ <html>
+	 <head>
+		 <script src="http://code.jquery.com/jquery-2.1.1.js"></script>
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		 <link rel="stylesheet" href="edit.css">
+		 <ul>
+			  <a href="final.php">BACK</a></li>
+		 </ul>
+							                     
+	 </head>
+	 <body>	
+		<?php
+			
+			if ( array_key_exists ('edit_file', $_POST)){
+       				$filename = $_POST['edit_file'];
+       				if ( file_exists ( $filename ) ) {
+           				 echo '<img src="'.$filename.'" alt="j" height="300" width="300" id="image"/>';
+       				}
+  			}
+
+		?>
+		<!-- Below are the buttons used to rotate the image using w3school as reference--!>
+		 <div id="rotating" class="floating-box">
+		 <label>Rotate Image</label>
+		 <input type="button" class="btnRotate" value="90" onClick="rotateImage(this.value);" />
+		 <input type="button" class="btnRotate" value="-90" onClick="rotateImage(this.value);" />
+		 <input type="button" class="btnRotate" value="180" onClick="rotateImage(this.value);" />
+		 <input type="button" class="btnRotate" value="360" onClick="rotateImage(this.value);" />
+	 </div>
+	 <!-- Below creates the resizing of an image which when pressed runs th script below--!>
+	 <div id ="sizing" class="floating-box">		
+		Height	<input type="number" id="height"> <br>
+		Width	<input type="number" id="width">  <br>
+		<button onclick="option1()" class="button" id="resize">RESIZE</button>
+	</div>
+
+	 </body>
+	 <!--this script allows a user to input their own specific image dimensions which then gets returned on screen--!>
+	 <script>
+	function option1(){
+	$(document).ready(function(){
+	$("button").click(function(){
+		$("img").attr({width: Number(document.getElementById("width").value)});
+		$("img").attr({height: Number(document.getElementById("height").value)});
+	});
+});
+}
+	 </script>
+	 <!--this script is what allows the images to be rotated --!>
+	<script>
+function rotateImage(degree){
+	$('#image').animate({  transform: degree },{
+		 step: function(now,fx) {
+			 $(this).css({
+				 '-webkit-transform':'rotate('+now+'deg)', 
+				 '-moz-transform':'rotate('+now+'deg)',
+				 'transform':'rotate('+now+'deg)'
+			 });
+		 }
+	});
+}
+	</script>
+
+ </html>
+
+
+

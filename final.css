@@ -1,0 +1,63 @@
+body {
+text-align: center;
+font-size: xx-large;
+margin:0;
+height: auto;
+}
+h1{
+margin-top: 100px;
+font-style: oblique;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: fixed;
+    background-color: #333;
+    top: 0;
+    width: 100%;
+}
+
+li{
+	float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) 
+{
+    background-color: black;
+    color:white;
+}
+
+
+.active {
+    background-color: white;
+    color:black;
+    }
+  
+  
+    .clear{ clear:both;}
+
+img{
+	margin-top:120px;
+}
+
+.button{
+	background-color: black;
+	border: none;
+	color: white;
+	padding 15px 15px;
+	text-align: center;
+	cursor: pointer;
+	display: inline-block;
+}
+

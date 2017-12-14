@@ -1,0 +1,78 @@
+
+body{
+	font-family: arial;
+}
+
+/*This creates the black box around the size feature*/
+#sizing {
+
+	margin-top: 10px;
+	margin: auto;
+	text-align: center;
+	font-size: 200%;
+	width: 120px;
+	border: 15px solid black;
+	padding: 15px;
+
+}
+/*This is the black box created around the rotation feature*/
+#rotating{
+	margin-left: 200px;
+	text-align: center;
+	font-size: 200%;
+	width: 120px;
+	border: 15px solid black;
+	padding: 15px;
+
+}
+/*This lines the features boxes in order below the image*/
+.floating-box{
+	float: left;
+	width: 120px;
+	height:180px;
+	border: 15px solid black;
+}
+/*BUtton design*/
+.button{
+	background-color: blue;
+	border: none;
+	color: white;
+	padding: 15px 15px;
+	text-align: center;
+	cursor: pointer;
+	display: inline-block;
+
+}	
+.btnRotate{
+	background-color: red;
+	border: none;
+	color: white;
+	padding:15px 15px;
+	cursor: pointer;
+	
+}
+
+/*This creates the top menu*/
+ul{
+	margin-left: 50px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+}
+
+
+img{
+	padding: 40px;
+	display:block;
+	margin: auto;
+}
+
+
+
+
